@@ -15,11 +15,5 @@
   "bugs": {
     "url": "https://github.com/LuminaEXE/The-mark-mission-/issues"
   },
-  "homepage": "https://github.com/LuminaEXE/The-mark-mission-#readme",
-  "dependencies": {
-    "tsx": "^3.12.1"
-  },
-  "devDependencies": {
-    "typescript": "^4.9.4"
-  }
+  "homepage": "https://github.com/LuminaEXE/The-mark-mission-#readme"
 }
