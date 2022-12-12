@@ -1,0 +1,170 @@
+
+/*
+ Fonts
+*/
+
+@import url('https://fonts.cdnfonts.com/css/doctor-glitch'); 
+/* font-family: 'Doctor Glitch', sans-serif; */ 
+
+@import url('https://fonts.cdnfonts.com/css/landepz-glitch');
+/*
+  font-family: 'LANDEPZ GLITCH', sans-serif;
+  font-family: 'LANDEPZ', sans-serif;
+*/
+
+@import url('https://fonts.cdnfonts.com/css/groupe');
+/* font-family: 'GROUPE', sans-serif; */
+
+@import url('https://fonts.cdnfonts.com/css/rather');
+/* font-family: 'RATHER', sans-serif; */
+.amogus {
+  filter: drop-shadow(0 0 10px, rgba(255, 255, 255, 0.646));
+}
+
+.title {
+  font-size: 10em;
+  color: white;
+  font-weight: 50;
+  letter-spacing: 50px;
+  margin: 0;
+  padding: 0;
+  font-family: 'RATHER', sans-serif;
+  text-align: center;
+  margin-top: 200px;
+}
+.glow {
+  filter: drop-shadow(0 0 10px, rgba(255, 255, 255, 0.646));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #060608;
+  --color: #FAFAFA;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial;
+}
+
+html { 
+  scroll-behavior: smooth; 
+}
+
+.scrollBtn {
+  animation: hoverNeg 1s ease-in-out;
+  border-radius: 12px;
+  padding: 15px 15px 15px 15px;
+  background-color: black;
+  border: solid 1px rgb(193, 0, 193);
+  color: white;
+
+  font-size: 1.5em;
+  font-family:'GROUPE', sans-serif;
+  
+}
+@keyframes hoverPos {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes hoverNeg {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.scrollBtn:hover {
+  animation: hoverPos 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+body {
+  background: var(--background);
+  background-image: url("https://raw.githubusercontent.com/LuminaEXE/pvtImageHost/main/waterfalls-1846424_1280.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  backdrop-filter: blur(5px);
+}
+
+.container {
+  color: var(--color);
+  flex-direction: column;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.right {
+  width: 100%;
+}
+
+.stack {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.stack span {
+  font-weight: bold;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  --stack-height: calc(100% / var(--stacks) - 1px);
+  --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+  --clip-top: calc(var(--stack-height) * var(--index));
+  --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+  clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+  animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 3s ease infinite 3s alternate-reverse;
+}
+
+.stack span:nth-child(odd) { --glitch-translate: 8px; }
+.stack span:nth-child(even) { --glitch-translate: -8px; }
+
+@keyframes stack {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+  };
+  60% {
+    opacity: 0.5;
+    transform: translateX(50%);
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    transform: translate(var(--glitch-translate));
+  }
+  2% {
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  4%, 100% {  text-shadow: none; transform: none; }
+}

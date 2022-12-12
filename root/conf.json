@@ -1,0 +1,11 @@
+{
+	"isBeta": true,
+	"version": 0.1,
+
+	"packageArray": 
+	[
+		"tenserflow"
+	],
+
+	"@C": "SachmanO Dec 9 2022 - 2030"
+}
