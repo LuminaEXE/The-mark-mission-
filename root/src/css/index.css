@@ -44,7 +44,8 @@
 }
 
 :root {
-  --background: #000321;
+  --background: #02042f
+  ;
   --color: #FAFAFA;
 }
 
@@ -93,7 +94,7 @@ html {
 }
 body {
   background: var(--background);
-  background-image: url("https://raw.githubusercontent.com/HotyChicken/pvt-img-host/main/nebula.png");
+  background-image: url("https://raw.githubusercontent.com/HotyChicken/pvt-img-host/main/men.png");
   position: absolute;
   top: 0;
   left: 0;
@@ -103,7 +104,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
-  backdrop-filter: blur(5px);
 }
 
 .container {
