@@ -44,7 +44,7 @@
 }
 
 :root {
-  --background: #060608;
+  --background: #000321;
   --color: #FAFAFA;
 }
 
@@ -62,9 +62,10 @@ html {
   animation: hoverNeg 1s ease-in-out;
   border-radius: 12px;
   padding: 15px 15px 15px 15px;
-  background-color: black;
-  border: solid 1px rgb(193, 0, 193);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: solid 2px rgb(193, 0, 193);
   color: white;
+  
 
   font-size: 1.5em;
   font-family:'GROUPE', sans-serif;
@@ -92,7 +93,7 @@ html {
 }
 body {
   background: var(--background);
-  background-image: url("https://raw.githubusercontent.com/HotyChicken/pvt-img-host/main/orion-nebula-11107.jpg");
+  background-image: url("https://raw.githubusercontent.com/HotyChicken/pvt-img-host/main/nebula.png");
   position: absolute;
   top: 0;
   left: 0;
@@ -135,7 +136,7 @@ body {
   --clip-top: calc(var(--stack-height) * var(--index));
   --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
   clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
-  animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 3s ease infinite 3s alternate-reverse;
+  animation: stack 100ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 3s ease infinite 3s alternate-reverse;
 }
 
 .stack span:nth-child(odd) { --glitch-translate: 8px; }
@@ -163,11 +164,31 @@ body {
 
 @keyframes glitch {
   0% {
-    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    text-shadow: -3px 4px 0 red, 3px -4px 0 blue;
     transform: translate(var(--glitch-translate));
   }
   2% {
-    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    text-shadow: 3px -4px 0 red, -3px 4px 0 blue;
   }
   4%, 100% {  text-shadow: none; transform: none; }
+}
+
+.MascotTitle{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 72px;
+  margin-left: 27px;
+  text-align: left;
+  position: relative;
+  margin-bottom: 200px;
+
+}
+
+.vignette {
+  width: 80%;
+  margin: 1em auto;
+  box-shadow: 50px 50px 113px #defeec inset,-50px -50px 110px #defeec inset;
+  height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
