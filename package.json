@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/LuminaEXE/The-mark-mission-#readme",
   "devDependencies": {
+    "tailwindcss": "^3.2.4",
     "tscompiler": "^1.0.48",
     "typescript": "^4.9.4"
   }
