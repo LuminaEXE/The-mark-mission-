@@ -1,4 +1,5 @@
 
+
 /*
  Fonts
 */
@@ -89,7 +90,7 @@ html {
 }
 body {
   background: var(--background);
-  background-image: url("https://raw.githubusercontent.com/LuminaEXE/pvtImageHost/main/waterfalls-1846424_1280.jpg");
+  background-image: url("https://raw.githubusercontent.com/HotyChicken/pvt-img-host/main/orion-nebula-11107.jpg");
   position: absolute;
   top: 0;
   left: 0;
