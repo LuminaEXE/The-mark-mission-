@@ -63,9 +63,10 @@ html {
   animation: hoverNeg 1s ease-in-out;
   border-radius: 12px;
   padding: 15px 15px 15px 15px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: solid 2px rgb(193, 0, 193);
+  background-color: rgba(0, 0, 0, 0.324);
+  border: solid 2px rgb(255, 255, 255);
   color: white;
+  backdrop-filter: blur(50px);
   
 
   font-size: 1.5em;
