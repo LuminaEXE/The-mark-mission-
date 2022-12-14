@@ -25,7 +25,7 @@
 }
 
 .title {
-  font-size: 10em;
+  font-size: 8em;
   color: white;
   font-weight: 50;
   letter-spacing: 50px;
@@ -34,6 +34,10 @@
   font-family: 'RATHER', sans-serif;
   text-align: center;
   margin-top: 200px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */ /* The typwriter cursor */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
 }
 .glow {
   filter: drop-shadow(0 0 10px, rgba(255, 255, 255, 0.646));
@@ -44,7 +48,7 @@
 }
 
 :root {
-  --background: #02042f
+  --background: #040431
   ;
   --color: #FAFAFA;
 }
@@ -63,11 +67,10 @@ html {
   animation: hoverNeg 1s ease-in-out;
   border-radius: 12px;
   padding: 15px 15px 15px 15px;
-  background-color: rgba(0, 0, 0, 0.324);
-  border: solid 2px rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  border: solid 2px rgb(193, 0, 193);
   color: white;
-  backdrop-filter: blur(50px);
-  
+  backdrop-filter: blur(10px);
 
   font-size: 1.5em;
   font-family:'GROUPE', sans-serif;
@@ -176,7 +179,7 @@ body {
 
 .MascotTitle{
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'GROUPE', sans-serif;
   font-size: 72px;
   margin-left: 27px;
   text-align: left;
@@ -192,4 +195,26 @@ body {
   height: 150px;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+
+.abstractLine {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
