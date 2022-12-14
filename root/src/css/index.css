@@ -49,6 +49,9 @@
     blink-caret .75s step-end infinite;
     white-space: nowrap; /* Keeps the content on a single line */
 }
+.mobileView {
+  display: none;
+}
 .glow {
   filter: drop-shadow(0 0 10px, rgba(255, 255, 255, 0.646));
 }
@@ -228,3 +231,22 @@ body {
   from, to { border-color: transparent }
   50% { border-color: orange; }
 }
+
+@media screen and (max-width: 600px) {
+  .mobileView {
+    font-size: 3em;
+    color: white;
+    font-weight: 50;
+    letter-spacing: 20px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Equinox Regular', sans-serif;
+    text-align: center;
+    margin-top: 350px;
+    justify-content: center;
+    align-items: center;
+  } .stack span {
+    display: none;
+  }
+}
+  
